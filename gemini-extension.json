@@ -1,0 +1,23 @@
+{
+  "name": "zimqi",
+  "version": "1.0.0",
+  "description": "Manage multi-site crews, rosters, check-ins and timesheets in ZimQi (hosted, Telegram-based crew timesheets) from Gemini CLI.",
+  "mcpServers": {
+    "zimqi": {
+      "httpUrl": "https://zimqi.com.au/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ZIMQI_API_KEY}"
+      },
+      "timeout": 30000
+    }
+  },
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "ZimQi API key",
+      "description": "Your ZimQi API key, from ZimQi > Integrations & API (https://zimqi.com.au/integrations). Paste the key only, without 'Bearer'.",
+      "envVar": "ZIMQI_API_KEY",
+      "sensitive": true
+    }
+  ]
+}
